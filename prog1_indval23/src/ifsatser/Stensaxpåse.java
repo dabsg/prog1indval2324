@@ -6,7 +6,7 @@ public class Stensaxpåse {
 	
 	public static void main(String[] args) {
 		
-		int slumptal = (int)  (Math.random()*10);
+		int slumptal = (int)  (Math.random()*3);
 		
 		System.out.println(slumptal);
 		
