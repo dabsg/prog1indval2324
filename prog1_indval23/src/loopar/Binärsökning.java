@@ -12,7 +12,6 @@ public class Binärsökning {
 		int slut= arr.length-1;
 		
 		boolean finns= false;
-		
 		int mitt = (start+slut)/2;
 		
 		while( slut-start>=0) {
