@@ -9,7 +9,6 @@ public class MinValueInArray {
 		findMin(arr);
 	}
 
-	
 	public static void findMin(int arr[]) {
 		
 		int min = Integer.MAX_VALUE;
@@ -21,8 +20,7 @@ public class MinValueInArray {
 				min=arr[i];
 				
 			}
-			
-			
+						
 		}
 		System.out.println(min);
 	}
