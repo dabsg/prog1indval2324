@@ -1,5 +1,8 @@
 package metoder;
 
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 public class Kryptering {
 
 	
@@ -7,8 +10,18 @@ public class Kryptering {
 	
 	 public static void main(String[] args) {
 		
-		System.out.println( crypt("abcdef dsjksjfks sdfjnksj",key)   );
-		 
+		 String c=crypt("abcdef dsffdfd",key);
+		
+		 PrintWriter p = null;
+		try {
+			 p = new PrintWriter("text.txt");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		p.print(c);
+		p.close();
 	}
 	
 	
