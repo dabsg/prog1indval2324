@@ -19,12 +19,12 @@ public class Text {
 	JLabel textnamn=new JLabel("ange ditt namn");
 	JLabel svar = new JLabel();
 	JButton b1= new JButton("send form");
-	JRadioButton r1 = new JRadioButton();
-	JRadioButton r2 = new JRadioButton();
-	JRadioButton r3 = new JRadioButton();
+	JRadioButton r1 = new JRadioButton("hund");
+	JRadioButton r2 = new JRadioButton("katt");
+	JRadioButton r3 = new JRadioButton("kanin");
 	ButtonGroup bg= new ButtonGroup();
-	JCheckBox box1=new JCheckBox();
-	JCheckBox box2=new JCheckBox();
+	JCheckBox box1=new JCheckBox("c++");
+	JCheckBox box2=new JCheckBox("csharp");
 	
 	String country[]={"1","2","3","4","5"};        
     JComboBox cb=new JComboBox(country); 
