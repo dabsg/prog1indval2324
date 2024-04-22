@@ -56,6 +56,7 @@ public class Boll extends JComponent {
 		super.paintComponent(g);
 
 		g.fillOval(x, y, r * 2, r * 2);
+		g.drawLine(x, y, 12, 12);
 
 	}
 
