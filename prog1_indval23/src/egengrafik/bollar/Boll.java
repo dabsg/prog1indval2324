@@ -24,6 +24,17 @@ public class Boll {
 	
 	public void move() {
 		
+		if(y>(400 -r*2) ||  y< 0 ) {
+			
+			vy=vy*-1;
+		}
+		
+		if(x>(400 -r*2) ||  x< 0 ) {
+			
+			vx=vx*-1;
+		}
+		
+		
 		this.x =this.x+vx;
 		this.y =this.y+vy;		
 		

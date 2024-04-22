@@ -12,21 +12,49 @@ import javax.swing.Timer;
 
 public class GameLoop extends JComponent {
 
-	Boll b1;
-	Boll b2;
+	Boll b[] =new Boll[50];
 	Timer t1;
 	
 public GameLoop() {
 	
-	b1= new Boll(20,20, Color.black, -2,2,50);
+	for (int i = 0; i < b.length; i++) {
 	
-	b2= new Boll(300,40, Color.green, 4,4,20);
+		int vvx;
+		
+		if(i%3==0) {
+			
+			vvx= ((int)(Math.random()*10))*-1;
+			
+		}else {
+			vvx= ((int)(Math.random()*10));
+			
+		}
+		
+		
+		
+		b[i]= new Boll((int)(Math.random()*400),
+					   (int)(Math.random()*400),
+				       Color.black,
+				       vvx,
+				       2,
+				       50);
+		
+	}
+	
+	
+	
+
 	this.setPreferredSize(new Dimension(400,400));
 	
 	t1= new Timer(50, e->{
 		
-		b1.move();
-		b2.move();
+		for (int i = 0; i < b.length; i++) {
+			b[i].move();	
+		}
+		
+		
+		
+		
 		repaint();
 	});
 	
@@ -39,10 +67,13 @@ public GameLoop() {
 protected void paintComponent(Graphics g) {
 	// TODO Auto-generated method stub
 	super.paintComponent(g);
-	g.setColor(b1.c);
-	g.fillOval( b1.x  ,  b1.y , b1.r*2  , b1.r*2   );
-	g.setColor(b2.c);
-	g.fillOval( b2.x  ,  b2.y , b2.r*2  , b2.r*2   );
+
+	for (int i = 0; i < b.length; i++) {
+		
+	
+	g.setColor(b[i].c);
+	g.fillOval( b[i].x  ,  b[i].y , b[i].r*2  , b[i].r*2   );
+	}
 }
 
 
