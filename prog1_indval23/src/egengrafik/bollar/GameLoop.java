@@ -12,7 +12,7 @@ import javax.swing.Timer;
 
 public class GameLoop extends JComponent {
 
-	Boll b[] =new Boll[10];
+	Boll b[] =new Boll[1000000];
 	Timer t1;
 	
 public GameLoop() {
@@ -34,7 +34,7 @@ public GameLoop() {
 		
 		b[i]= new Boll((int)(Math.random()*400),
 					   (int)(Math.random()*400),
-				       Color.black,
+				       new Color(   (int)(Math.random()*255) , (int)(Math.random()*255) , (int)(Math.random()*255) ),
 				       vvx,
 				       2,
 				       50);
