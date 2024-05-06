@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 public class Kombo extends JComponent {
 
 	
-	
+	int x=200;
 	
 	public Kombo() {
 
@@ -26,11 +26,15 @@ public class Kombo extends JComponent {
 			super.paintComponent(g);
 			
 			g.setColor(Color.red);
-			g.fillArc(200, 200, 100, 100, 0, 90);
+			g.fillArc(x, 200, 100, 100, 0, 90);
 			
 	}
 	
-	
+	public void move() {
+		
+		x+=20;
+		repaint();
+	}
 	
 	
 	public static void main(String[] args) {
@@ -48,6 +52,12 @@ public class Kombo extends JComponent {
 		
 		f.add(p);
 		f.pack();
+		
+		b.addActionListener(e->{
+			
+			k.move();
+			
+		});
 		
 		
 		
