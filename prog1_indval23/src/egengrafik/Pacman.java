@@ -16,8 +16,8 @@ public class Pacman extends JComponent implements KeyListener {
 	int x= 100;
 	int y=100;
 
-	int pollyx[]= {150,100,100};
-	int pollyy[]= {150,140,175};
+	int pollyx[]= {x+50,x,x};
+	int pollyy[]= {y+50,y+40,y+75};
 	Timer t ;
 	
 	public Pacman() {
@@ -82,7 +82,13 @@ public class Pacman extends JComponent implements KeyListener {
 		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			
 			x=x+10;
+			
+			pollyx[0]=x+50;      
+			pollyx[1]=x;
+			pollyx[2]=x;
 			repaint();
+			
+			
 			
 		}
 		
