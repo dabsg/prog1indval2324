@@ -33,11 +33,8 @@ public class Kombo extends JComponent {
 			g.fillOval(200, 200, 200, 200);
 			g.setColor(Color.BLACK);
 			g.fillArc(200, 200, 200, 200, f, f+2);
-			g.drawString("sdsdfsfd", 10, 10);
-			Graphics2D g2d = (Graphics2D) g;
-			g.
-		    CubicCurve2D cubcurve = new CubicCurve2D.Float(30, 400, 150, 400, 200, 500, 350, 450);
-		    g2d.draw(cubcurve);
+			g.drawString("test", 10, 10);
+			
 			
 	}
 	
